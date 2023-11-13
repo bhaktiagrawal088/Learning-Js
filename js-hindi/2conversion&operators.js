@@ -85,7 +85,7 @@ console.log(i)        // 1
 
 // ************ comparsion operation *************
 console.log(1==1)         // true
-console.log(1===1)          // true
+console.log(1===1)          // true 🤫.
 console.log(1!=1)           // false
 console.log(1!==1)          // false
 console.log(2>1)            // true
@@ -125,7 +125,16 @@ console.log("2" === 2)          // false
 Non- Primitive or Refrence type ( call by refrence)
 
 Array, Objects, Functions
+const heros = ["Saktiman", "naagraj", "doga"]
+let myObj = {
+    name: 'John',
+    age: 45,
+}
+function addHeroes() { 
+    let heroes = ['batman', 'superman']
+}
 
 Q.1 Javascripts is dynamically type language or statically type language
 Ans: Dynamically typed 
  
+*/

@@ -68,4 +68,4 @@ object
 
 console.log(typeof "Bhakti") // typeof operation is used to define a datatype of particular line
 console.log(typeof null)  // object 
-console.log(typeof undefined) // undefined 
+console.log(typeof undefined) // undefined     
