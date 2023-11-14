@@ -1,4 +1,4 @@
-// Dates
+// Dates and Times
 let myDate =  new Date()
 console.log(myDate); // not readable form
 // Formatting the date
@@ -31,9 +31,9 @@ console.log(newDate.getHours())
 newDate.toLocaleString('default',{
     hour: 'numeric',
     minute:'numeric' ,
-    second : 'numeric'
-})
-console.log(newDate)   
+    second : 'numeric',
+    weekday : 'long'
+})  
 
 
 
