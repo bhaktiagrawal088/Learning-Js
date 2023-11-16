@@ -5,7 +5,7 @@
 // 4. We can use this operator on any class that has an overloaded assignment operator
 
 
-const user ={
+const user = {
     username : "Bhakti",
     price : 999,
     email: 'bhaktiagrawal@gmail.com',
@@ -16,7 +16,7 @@ const user ={
     }
 }
 user.welcomeMessage()
-//user.username = "Shakti"   // this is called contest
+//user.username = "Shakti"   // this is called context(change the username)
 //console.log(user)   // now username will be change because of this operator
 console.log(this)  // but this will print empty --> {}😂
 
@@ -60,5 +60,32 @@ const display = () => {username: "Bhakti"}
 console.log(display())  // -->undefined because without parentheses object can't return
 
 const display1 = () => ({username : "Bhakti Agrawal"})
-console.log(display1()) // now it will return { username: "Bhakti Agrawal"}
+console.log(display1()); // now it will return { username: "Bhakti Agrawal"}
+
+
+// Immeddiately Invoked Function Expressions (IIFE)
+// we are solve the problem of pollution of global scope
+// We can use the IIFE to prevent the pollution of global scope
+// It helps us in creating private variables and methods
+// function IIFE (){
+
+( function milk(){
+    // named IIFF(function name)
+    console.log('DB Connected');
+})(); // this semicolon is important🧐
+// another way of writing IIFE
+((name)=>{
+    // SIMPLE IIFF(without function name)
+    console.log(`DB Ocnnected two ${name}`);
+})("BHAKTI AGRAWAL")
+
+// Javascript Execution Context
+// 1. Global Execution Context
+// 2. Local execution context
+// 3. Eval Execution Context
+
+// javascript code execution phase
+// 1. Memory Creation Phase(allocate the memory of variables, functions)
+// 2. Execution Phase
+
 
