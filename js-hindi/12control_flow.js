@@ -119,6 +119,8 @@ console.log(val1); // 10
 val1 = undefined ?? 15
 console.log(val1); // 15
 
+// Null Coalescing operator and terniary operator is different
+
 // Terniary Operator
 let age = 27;
 age >= 18 ? console.log('Adult') : console.log('Minor');
