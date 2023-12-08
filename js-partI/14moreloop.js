@@ -87,5 +87,5 @@ for(const [key, value] of map){
     }
  ]
  myCoding.forEach((item)=> {
-    console.log(`${item.languageName} and  file name ${item.LanguageFileName}`);
+    console.log(`${item.languageName} and file name ${item.LanguageFileName}`);
  })

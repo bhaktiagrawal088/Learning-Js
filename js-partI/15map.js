@@ -86,4 +86,5 @@ const shoopingCart = [
 ]
 
 const priceToPay= shoopingCart.reduce((acc, item)=> acc+ item.price,0)
-console.log(priceToPay) // --> 6898
+console.log(priceToPay) // --> 6497
+
