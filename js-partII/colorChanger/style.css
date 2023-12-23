@@ -1,0 +1,25 @@
+body{
+    background-color: aliceblue;
+     color : black;
+    }
+button{
+    height : 3em;
+    width : 5em;
+    position: relative;
+    top: 50;
+    left: 10;
+    border: 2px solid black;
+}
+#btn-1{ 
+    background-color: grey;
+    color: white;}
+#btn-2{ 
+    background-color: white;
+    color:black;}
+#btn-3{
+    background-color: darkblue;
+    color: white;}
+#btn-4{
+    background-color: yellow;
+    color: black;
+}
