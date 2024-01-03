@@ -1,0 +1,13 @@
+ ////// Default Javascript Behavoiur //////
+JavaScript is Synchronous (code will execute one by  one)
+JavaScript is a Single threaded Language (Everything will execute on Single Thread) So, Javascript is slow Language as
+compare to multithreaded language 
+
+/// Execution context
+Execute one line of code at a time
+ ---> each operation waits for the last one to complete before executing
+
+
+///// Blocking Code vs Non-Blocking code //////
+Blocking code (Block the flow of exection)----> Read File Sync
+Non-Blocking code (doesn't block the flow of execution) -----> Read File Async

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML EVENTS </title>
+</head>
+<body style="background-color: black; color:aliceblue">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="shoes" src="product-image-one.webp" alt="Shoes" ></li>
+            <li><img width="200px" id="peacock" src="0622a8711e996f17ee9ed1db38cb8e8a.webp" alt="" ></li>
+            <li><img width="200px" id="chair" src="was049-03-1672890946.webp" alt="" ></li>
+            <li><img width="200px" id="couples" src="0161edb85529df08c5bf59d12ea551a6.webp" alt="" ></li>
+            <li><a style="color:aliceblue;" href= "http://google.com" id="google" >Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+   // document.getElementById('shoes').onclick = function(){
+    //  alert("This is a shoes");
+     // This approach gives less features 
+
+    document.getElementById('chair').addEventListener('click', function(e){
+        alert("This is a chair"); // This approach gives more features
+
+        console.log(e);  // Event object
+    }, false) // false is ByDefault(Event Bubbling up ) and true means( Event Capturing)
+      // attachEvent()
+    // jQuery - on 
+
+    // type, timeStamp, defaultPrevent, target, toElement, srcElement, currentarget
+    // clientX, clientY, screenX , screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    // Event Propogation (bubbling up ) --> buttom to top  means li->ul->div
+    // Capturing --> Top to bottom means div->ul->li
+
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("This is inside the Image Event")
+    })
+    document.getElementById('couples').addEventListener('click', function(e){
+        console.log('Cute Couples')
+         // In case of false first cute couples then this is inside the images event
+         // In case of true first this is inside the images event then cute couples 
+         // true) Capture phase
+         // e.stopPropagation(); // stops the event from going further
+    })
+
+    document.getElementById('google').addEventListener('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        console.log("Google Clicked");
+    })
+
+
+    // When we clcikc the images then remove it
+    document.getElementById('images').addEventListener('click', function(e){
+        if(e.target.tagName === 'IMG'){
+        let removeIt = e.target.parentNode
+        removeIt.remove();
+        }
+    })
+
+    // this is second of remove
+    // removeIt.parentNode.removeChild(removeIt)
+
+</script>
+</html>

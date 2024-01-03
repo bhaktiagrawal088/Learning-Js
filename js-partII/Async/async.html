@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color : #fff">
+</body>
+    <h1>Learning Javascripts</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script>
+        setTimeout(function(){
+            console.log('Bhakti')
+        }, 2000) // take 2 second to perform a function
+
+        // refrence of the function
+        let myFunction = function() {console.log("Hello World")}
+        setTimeout(myFunction, 3000)
+
+        const changeText = function(){ document.querySelector('h1').
+        innerHTML = " Best series of the javascript"
+    }
+         const changeMe = setTimeout(changeText, 2000)
+
+        // cleartime out function take a refrence of another function
+        // and after specific time it will execute that function
+        document.querySelector('#stop').
+        addEventListener('click', function(){
+            clearTimeout(changeMe)
+            console.log('STOPPED')
+        })
+    </script>
+</html>
