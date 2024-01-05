@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body style="background-color: black;">
+    <button id="orange">Orange Button</button>
+    <button id="green">Green Button</button>
+    <button id="yellow">Yellow Button</button>
+</body>
+<script>
+    function init(){
+        let name = "Bhakti Agrawal";
+        // inner function 
+        function displayName(){
+            console.log(name);
+        }
+        displayName();
+    }
+    // outer function
+    init();
+
+    // lexical scope
+    function outer(){
+        let username = "bhaktigrawal088";
+        // console.log(secret) // -> secret is not accessable in this scope
+        // inner function1
+        function inner1(){
+            let secret = 'abc123';
+            console.log(`Inner1: ${username}`);
+        }
+        function inner2(){
+            console.log(`Inner2 : ${username}`);
+            // console.log(`Inner2 secret: ${secret}`) // ---> secret is not accessable in this scope
+        }
+        inner1();
+        inner2();
+    }
+    outer();
+    // console.log(`Outer : ${username}`)  // Error-> out of scope
+
+
+    // ********* Closure **********
+
+    function makefunc(){
+        let name = "Agrawal";
+        function displayName(){
+            console.log(name);
+        }
+        return displayName;
+    }
+    // Even though outerFunction has finished executing, closureExample still has access to outervaraible
+    const myfunc = makefunc();
+    myfunc();
+    
+</script>
+
+<script>
+    <!-- document.getElementById('orange')
+     .addEventListener('click', function (){
+        document.body.style.backgroundColor = 'orange';
+    })
+    document.getElementById('green')
+    .onclick = function(){
+        document.body.style.backgroundColor = 'green';
+    } -->
+    // we can't use this approach to change the 500+ color 
+    // we can solve this problem using closure concept 
+</script>
+<script>
+    function clickhandle(color){
+       // document.body.style.backgroundColor = `${color}`;
+
+       return function(){
+        document.body.style.backgroundColor = `${color}`;
+       }
+    }
+    document.getElementById('orange').onclick = clickhandle('orange');
+    document.getElementById('green').onclick = clickhandle('green')
+    document.getElementById('yellow').onclick = clickhandle('yellow')
+</script>
+</html>

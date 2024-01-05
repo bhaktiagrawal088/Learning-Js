@@ -22,6 +22,3 @@ class Teacher extends User{
 const teacherobj = new Teacher('Bhakti', 'bhaktiagrawa286@gmail.com')
 teacherobj.logMe();
 // teacherobj.createId(); // error --> createdId is not a function because createId is static methods 
-
-const Instance = new User('Bhakti');
-Instance.logMe();
